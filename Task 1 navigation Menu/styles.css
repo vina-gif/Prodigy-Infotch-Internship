@@ -1,0 +1,60 @@
+/* Base styles */
+body {
+    padding-top: 76px;
+}
+
+/* Navbar styles */
+#mainNav {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--bs-dark);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#mainNav.navbar-scrolled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--bs-primary);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--bs-info);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Section styles */
+section {
+    padding: 6rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+}
